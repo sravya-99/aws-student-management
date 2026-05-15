@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>AWS Student Management System</title>
 
     <link rel="stylesheet" href="style.css">
@@ -11,58 +12,157 @@
 
 <body>
 
-    <header>
-        <h1>AWS Student Management System</h1>
-    </header>
+    <!-- Navigation Bar -->
 
-    <div class="container">
+    <nav class="navbar">
 
-        <h2>Student Registration Form</h2>
+        <div class="logo">
+            AWS Student Management
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Students</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <h1>Cloud-Based Student Management System</h1>
+
+        <p>
+            Hosted on AWS Lightsail with GitHub Integration
+        </p>
+
+    </section>
+
+    <!-- Dashboard Cards -->
+
+    <section class="dashboard">
+
+        <div class="card">
+            <h2>120</h2>
+            <p>Total Students</p>
+        </div>
+
+        <div class="card">
+            <h2>8</h2>
+            <p>Departments</p>
+        </div>
+
+        <div class="card">
+            <h2>15</h2>
+            <p>Faculty Members</p>
+        </div>
+
+    </section>
+
+    <!-- Form Section -->
+
+    <section class="form-section">
+
+        <h2>Register Student</h2>
 
         <form id="studentForm">
 
-            <input type="text" placeholder="Enter Student Name" required>
+            <div class="form-group">
+                <label>Student Name</label>
+                <input type="text" placeholder="Enter Student Name" required>
+            </div>
 
-            <input type="text" placeholder="Enter Roll Number" required>
+            <div class="form-group">
+                <label>Roll Number</label>
+                <input type="text" placeholder="Enter Roll Number" required>
+            </div>
 
-            <input type="text" placeholder="Enter Department" required>
+            <div class="form-group">
+                <label>Department</label>
+
+                <select required>
+                    <option value="">Select Department</option>
+                    <option>CSE</option>
+                    <option>AIML</option>
+                    <option>ECE</option>
+                    <option>EEE</option>
+                    <option>Mechanical</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="Enter Email Address" required>
+            </div>
 
             <button type="submit">
-                Add Student
+                Register Student
             </button>
 
         </form>
+
+    </section>
+
+    <!-- Student Table -->
+
+    <section class="table-section">
 
         <h2>Registered Students</h2>
 
         <table>
 
-            <tr>
-                <th>Name</th>
-                <th>Roll Number</th>
-                <th>Department</th>
-            </tr>
+            <thead>
 
-            <tr>
-                <td>Doraemon</td>
-                <td>101</td>
-                <td>ECM</td>
-            </tr>
-	    <tr>
-                <td>Shinchan</td>
-                <td>102</td>
-                <td>ECM</td>
-            </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>Roll Number</th>
+                    <th>Department</th>
+                    <th>Email</th>
+                </tr>
 
-            <tr>
-                <td>Anya</td>
-                <td>103</td>
-                <td>AIML</td>
-            </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Doraemon</td>
+                    <td>101</td>
+                    <td>ECM</td>
+                    <td>doraemon@gmail.com</td>
+                </tr>
+
+                <tr>
+                    <td>Sinchan</td>
+                    <td>102</td>
+                    <td>AIML</td>
+                    <td>sinchan@gmail.com</td>
+                </tr>
+
+                <tr>
+                    <td>Anya</td>
+                    <td>103</td>
+                    <td>ECE</td>
+                    <td>anya@gmail.com</td>
+                </tr>
+
+            </tbody>
 
         </table>
 
-    </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            AWS Student Management System | Hosted on AWS Lightsail
+        </p>
+
+    </footer>
 
     <script src="script.js"></script>
 
