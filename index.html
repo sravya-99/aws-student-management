@@ -1,18 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AWS Student Management System</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>AWS Student Management System</h1>
+    <header>
+        <h1>AWS Student Management System</h1>
+    </header>
 
-    <p>Welcome to my cloud project.</p>
+    <div class="container">
 
-    <button onclick="showMessage()">Click Me</button>
+        <h2>Student Registration Form</h2>
+
+        <form id="studentForm">
+
+            <input type="text" placeholder="Enter Student Name" required>
+
+            <input type="text" placeholder="Enter Roll Number" required>
+
+            <input type="text" placeholder="Enter Department" required>
+
+            <button type="submit">
+                Add Student
+            </button>
+
+        </form>
+
+        <h2>Registered Students</h2>
+
+        <table>
+
+            <tr>
+                <th>Name</th>
+                <th>Roll Number</th>
+                <th>Department</th>
+            </tr>
+
+            <tr>
+                <td>Doraemon</td>
+                <td>101</td>
+                <td>ECM</td>
+            </tr>
+	    <tr>
+                <td>Shinchan</td>
+                <td>102</td>
+                <td>ECM</td>
+            </tr>
+
+            <tr>
+                <td>Anya</td>
+                <td>103</td>
+                <td>AIML</td>
+            </tr>
+
+        </table>
+
+    </div>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
