@@ -1,70 +1,235 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header {
-    background-color: #1f4e79;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+}
+
+/* Navigation Bar */
+
+.navbar {
+    background-color: #0d1b2a;
     color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    margin-top: 30px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-h2 {
-    color: #1f4e79;
-}
-
-form {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
 }
 
-input {
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4ea8de;
+}
+
+/* Hero Section */
+
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(to right, #1b263b, #415a77);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
     margin-bottom: 15px;
-    padding: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* Dashboard Cards */
+
+.dashboard {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 250px;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: #1b263b;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Form Section */
+
+.form-section {
+    width: 80%;
+    max-width: 700px;
+    margin: auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1b263b;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
     font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #1b263b;
 }
 
 button {
-    background-color: #1f4e79;
+    width: 100%;
+    padding: 14px;
+    background-color: #1b263b;
     color: white;
-    padding: 12px;
     border: none;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 17px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #163d5c;
+    background-color: #415a77;
+}
+
+/* Table Section */
+
+.table-section {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.table-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1b263b;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
 }
 
-table, th, td {
-    border: 1px solid #ccc;
-}
-
-th {
-    background-color: #1f4e79;
+thead {
+    background-color: #1b263b;
     color: white;
 }
 
-th, td {
-    padding: 12px;
+th,
+td {
+    padding: 15px;
     text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Footer */
+
+footer {
+    background-color: #0d1b2a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .dashboard {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-section {
+        width: 95%;
+    }
+
+    table {
+        font-size: 14px;
+    }
 }
